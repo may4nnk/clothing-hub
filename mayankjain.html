@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The clothing hub</title>
+    <style>
+        /* Basic Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'italic', sans-serif;
+            line-height: 1.6;
+            color: #f37c05;
+            scroll-behavior: smooth;
+            height: 100%; /* Ensure the body stretches the whole screen */
+            
+            background-image: url(https://images.pexels.com/photos/996329/pexels-photo-996329.jpeg?cs=srgb&dl=pexels-kaip-996329.jpg&fm=jpg);
+            opacity: 0.7;
+        }
+
+        header {
+           
+            padding: 20px;
+            text-align: center;
+            position: absolute;
+            top: 0;
+            width: 100%;
+            z-index: 10;
+        }
+
+        header h1 {
+            font-size: 3rem;
+            color: #dedede;
+            letter-spacing: 2px;
+        }
+
+        nav {
+            margin-top: 10px;
+        }
+
+        nav a {
+            margin: 0 15px;
+            text-decoration: none;
+            color: #dfcef3;
+            font-weight: bold;
+            text-transform: uppercase;
+        }
+
+        section {
+            background: rgba(0, 0, 0, 0.301);
+            padding: 100px 20px;
+            max-width: 800px;
+            margin: 20px auto;
+            border-radius: 10px;
+            text-align: center;
+            display: none;
+            background-size: cover;
+            background-position: center;
+            height: 100vh; /* Make sections full-screen */
+        }
+
+        section h2 {
+            font-size: 2rem;
+            margin-bottom: 20px;
+            color: #f6fcadea;
+        }
+
+        .about, .members, .contact {
+            padding: 40px 20px;
+        }
+
+        .about p, .members p, .contact p {
+            font-size: 1.1rem;
+            line-height: 1.8;
+            margin: 20px 0;
+        }
+
+        .members .member {
+            display: flex;
+            justify-content: space-around;
+            margin-top: 20px;
+        }
+
+        .members .member div {
+            text-align: center;
+        }
+
+        .members .member img {
+            border-radius: 50%;
+            width: 120px;
+            height: 120px;
+            border: 3px solid #39494d;
+        }
+
+        .contact form input, .contact form textarea {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 2px solid #fa9d9d;
+            border-radius: 5px;
+            background: rgba(165, 252, 143, 0.8);
+            color: #333;
+        }
+
+        .contact form button {
+            background: #c9c5b5;
+            border: none;
+            padding: 10px 20px;
+            font-size: 1rem;
+            color: #fff;
+            cursor: pointer;
+            border-radius: 5px;
+            transition: 0.3s;
+        }
+
+        .contact form button:hover {
+            background: #ffffff;
+        }
+
+        footer {
+            text-align: center;
+            padding: 20px;
+            
+            position: absolute;
+            bottom: 0;
+            width: 100%;
+        }
+
+        footer p {
+            color: #fff;
+        }
+
+        /* Active section styles */
+        .active {
+            display: block;
+        }
+
+        /* Section-specific background images */
+        #home {
+            background-image: url('');
+            background-size: cover;
+        }
+
+        #about {
+            background-image: url('https://images.unsplash.com/photo-1582719188393-bb71ca45dbb9?w=900&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8Y2xvdGhpbmclMjBzdG9yZXxlbnwwfHwwfHx8MA%3D%3D');
+        }
+
+        #members {
+            background-image: url('https://images.unsplash.com/photo-1578932750355-5eb30ece487a?w=900&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTV8fGNsb3RoaW5nJTIwc3RvcmV8ZW58MHx8MHx8fDA%3D');
+        }
+
+        #contact {
+            background-image: url('https://images.unsplash.com/photo-1445205170230-053b83016050?w=900&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTl8fGNsb3RoaW5nJTIwc3RvcmV8ZW58MHx8MHx8fDA%3D');
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>branded clothing</h1>
+    <nav>
+        <a href="#home" onclick="showSection('home')">Home</a>
+        <a href="#about" onclick="showSection('about')">About</a>
+        <a href="#members" onclick="showSection('members')">Members</a>
+        <a href="#contact" onclick="showSection('contact')">Contact</a>
+    </nav>
+</header>
+
+<section id="home" class="active">
+    <h2>Welcome </h2>
+    <p><b>hey guys welcome this is our clothing brand where you can find every thing you want old money to party wear every brand in cheap as possible  and here you can find any thing you demand for every clothing style according to every size with suitable rate and a good quality</b></p>
+    <p><b>Stay tuned for our upcoming offer on clothes, and don't forget to follow us on social media!</b></p>
+</section>
+
+<section id="about">
+    <h2>About the Brand</h2>
+    <p><b>At [clothing hub], we believe that clothing is more than just fabric—it's a form of self-expression, a statement of individuality, and a celebration of style. Our mission is simple: to create high-quality, timeless designs that empower you to feel confident, comfortable, and true to yourself every day.
+
+        Founded in 2021, the clothing hub started with a vision to make fashion accessible, sustainable, and stylish for people who appreciate both craftsmanship and creativity. We pride ourselves on using ethically sourced materials and sustainable practices, so you can feel good about what you're wearing—and how it impacts the world around you.
+        
+        Our collections are designed with versatility in mind, offering pieces that easily transition from casual to chic, from day to night. Whether you're dressing for a busy day at work or a night out with friends, our designs are made to move with you.
+        
+        We’re not just a clothing brand; we’re a community of like-minded individuals who value authenticity, quality, and purpose. Each piece we create is a reflection of our commitment to making the world a better place through fashion.
+        
+        Join us on this journey to redefine style with purpose. We hope you’ll find something that resonates with you and brings out your best self.
+        
+        </b></p>
+    
+</section>
+
+<section id="members" class="members">
+    <h2>Meet the Brand </h2>
+    <div class="member">
+        <div>
+            <img src="https://static.vecteezy.com/system/resources/thumbnails/036/498/932/small_2x/ai-generated-confident-indian-man-in-a-formal-suit-on-transparent-background-ai-png.png" alt="brand Member 1">
+            <h3>mayank</h3>
+            <p>founder</p>
+            <p>mayank is founder of this brand</p>
+        </div>
+        <div>
+            <img src="https://img.freepik.com/premium-photo/young-indian-businessman-suit-tie-standing-office-ai-generated_843560-800.jpg" alt="Brand Member 2">
+            <h3>darshan</h3>
+            <p>co-founder</p>
+            <p>darshan is co founder of  this brand</p>
+        </div>
+        <div>
+            <img src="https://img.freepik.com/premium-photo/indian-business-man-black-suit-white-background_862994-279302.jpg" alt="Brand Member 3">
+            <h3>naksh</h3>
+            <p>head of management</p>
+            <p>naksh is the head of management team</p>
+        </div>
+    </div>
+</section>
+
+<section id="contact" class="contact">
+    <h2>Contact Us</h2>
+    <form action="#">
+        <input type="text" placeholder="Your Name" required>
+        <input type="email" placeholder="Your Email" required>
+        <input type="more suggestions" placeholder="suggestions" required>
+        <textarea placeholder="Your Message" required></textarea>
+        <button type="submit">Send Message</button>
+    </form>
+    <p><b>if you need any help or want to give suggestions contactus thank you.</b></p>
+</section>
+
+<footer>
+    <p><b>Thank You For Visiting Our Website</b></p>
+</footer>
+
+<script>
+    function showSection(sectionId) {
+        // Hide all sections
+        document.querySelectorAll('section').forEach(function(section) {
+            section.classList.remove('active');
+        });
+        
+        // Show the clicked section
+        document.getElementById(sectionId).classList.add('active');
+    }
+</script>
+
+</body>
+</html>
